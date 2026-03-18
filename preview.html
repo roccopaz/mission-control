@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mission Control — Preview</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#050508;color:#e8e8f0;font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
+
+  .hero{
+    text-align:center;
+    padding:60px 24px 40px;
+    background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(59,130,246,.12),transparent 70%);
+    border-bottom:1px solid rgba(255,255,255,.06);
+  }
+  .badge{
+    display:inline-flex;align-items:center;gap:7px;
+    background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25);
+    color:#60a5fa;font-size:12px;padding:5px 14px;border-radius:99px;
+    margin-bottom:20px;font-weight:600;
+  }
+  .dot{width:7px;height:7px;border-radius:50%;background:#10b981;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  h1{font-size:clamp(28px,5vw,52px);font-weight:800;letter-spacing:-1px;margin-bottom:14px;
+    background:linear-gradient(135deg,#fff 30%,#60a5fa);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .sub{font-size:16px;color:#64748b;max-width:520px;margin:0 auto 32px}
+  .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 22px;border-radius:10px;font-size:14px;font-weight:600;
+    text-decoration:none;transition:all .2s;
+  }
+  .btn-primary{background:#3b82f6;color:#fff}
+  .btn-primary:hover{background:#2563eb;transform:translateY(-1px)}
+  .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.12);color:#e8e8f0}
+  .btn-ghost:hover{border-color:#3b82f6;color:#60a5fa}
+
+  .screenshots{max-width:1100px;margin:0 auto;padding:60px 24px}
+  .screenshots h2{font-size:22px;font-weight:700;margin-bottom:8px}
+  .screenshots p{color:#64748b;font-size:14px;margin-bottom:32px}
+
+  .tabs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+  .tab{
+    padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;
+    border:1px solid rgba(255,255,255,.1);background:transparent;color:#64748b;
+    cursor:pointer;transition:all .18s;
+  }
+  .tab.active,.tab:hover{background:rgba(59,130,246,.12);border-color:rgba(59,130,246,.3);color:#60a5fa}
+
+  .screenshot-wrap{
+    border-radius:16px;overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 24px 80px rgba(0,0,0,.7);
+    position:relative;
+    background:#0a0a0f;
+  }
+  .screenshot-bar{
+    padding:12px 16px;background:#0d0d1a;
+    display:flex;align-items:center;gap:10px;
+    border-bottom:1px solid rgba(255,255,255,.06);
+  }
+  .bar-dots{display:flex;gap:6px}
+  .bar-dot{width:12px;height:12px;border-radius:50%}
+  .bar-url{
+    flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
+    border-radius:6px;padding:5px 12px;font-size:12px;color:#64748b;
+    font-family:monospace;
+  }
+  .screenshot-img{
+    width:100%;display:block;
+    transition:opacity .3s;
+  }
+  .screenshot-label{
+    position:absolute;top:60px;right:16px;
+    background:rgba(59,130,246,.9);color:#fff;
+    font-size:11px;font-weight:700;padding:4px 10px;border-radius:6px;
+    letter-spacing:.05em;text-transform:uppercase;
+  }
+
+  .features{
+    max-width:1100px;margin:0 auto;padding:0 24px 60px;
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;
+  }
+  .feature{
+    background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);
+    border-radius:14px;padding:22px;
+  }
+  .feature-icon{font-size:26px;margin-bottom:10px}
+  .feature-name{font-size:15px;font-weight:700;margin-bottom:5px}
+  .feature-desc{font-size:13px;color:#64748b;line-height:1.6}
+
+  footer{text-align:center;padding:32px 24px;border-top:1px solid rgba(255,255,255,.06);
+    font-size:13px;color:#475569}
+  footer a{color:#60a5fa;text-decoration:none}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="badge"><span class="dot"></span>Live Preview</div>
+  <h1>Mission Control Dashboard</h1>
+  <p class="sub">A custom-built AI operations hub for monitoring agents, projects, revenue, and content — all in one dark-mode dashboard.</p>
+  <div class="cta-row">
+    <a href="https://roccopaz.github.io/mission-control/" class="btn btn-primary">Open Live Demo →</a>
+    <a href="https://github.com/roccopaz/mission-control" class="btn btn-ghost">View Source</a>
+  </div>
+</div>
+
+<div class="screenshots">
+  <h2>Screenshots</h2>
+  <p>Click a tab to switch views</p>
+
+  <div class="tabs">
+    <button class="tab active" onclick="showTab(0)">📊 Dashboard</button>
+    <button class="tab" onclick="showTab(1)">🤖 Command Center</button>
+    <button class="tab" onclick="showTab(2)">📺 Content</button>
+  </div>
+
+  <div class="screenshot-wrap">
+    <div class="screenshot-bar">
+      <div class="bar-dots">
+        <div class="bar-dot" style="background:#ef4444"></div>
+        <div class="bar-dot" style="background:#f59e0b"></div>
+        <div class="bar-dot" style="background:#10b981"></div>
+      </div>
+      <div class="bar-url">roccopaz.github.io/mission-control/</div>
+    </div>
+    <div id="tabLabel" class="screenshot-label">Dashboard</div>
+    <img id="mainImg"
+      src="https://raw.githubusercontent.com/roccopaz/mission-control/main/images/dashboard-main.jpg"
+      alt="Mission Control Dashboard"
+      class="screenshot-img"/>
+  </div>
+</div>
+
+<div class="features">
+  <div class="feature">
+    <div class="feature-icon">📊</div>
+    <div class="feature-name">Live Metrics</div>
+    <div class="feature-desc">Units sold, inventory, active projects, and tasks — all synced from Amazon SP-API in real time</div>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">🤖</div>
+    <div class="feature-name">Agent Command Center</div>
+    <div class="feature-desc">Monitor all 4 AI agents (Roni, Robo, Star, Yoshi), their status, last activity, and next scheduled tasks</div>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">💰</div>
+    <div class="feature-name">Revenue & P&L</div>
+    <div class="feature-desc">YNAB-connected expense tracking, Amazon revenue sync, and net P&L — all auto-calculated</div>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">📺</div>
+    <div class="feature-name">Content Calendar</div>
+    <div class="feature-desc">Postiz API integration shows scheduled and published posts across YouTube and TikTok</div>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">📡</div>
+    <div class="feature-name">Trending Intel</div>
+    <div class="feature-desc">Brave Search API powers a live feed of AI news, market trends, and video ideas</div>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">🔒</div>
+    <div class="feature-name">Zero-Trust Security</div>
+    <div class="feature-desc">Tailscale VPN, scoped OAuth, encrypted keyring — no personal data exposed to the AI runtime</div>
+  </div>
+</div>
+
+<footer>
+  Built by <a href="https://roccopaz.github.io">Rocco Paz</a> · 
+  <a href="https://github.com/roccopaz/mission-control">GitHub</a> · 
+  Powered by Claude Code + OpenClaw ⚡
+</footer>
+
+<script>
+const imgs = [
+  {src:'https://raw.githubusercontent.com/roccopaz/mission-control/main/images/dashboard-main.jpg', label:'Dashboard'},
+  {src:'https://raw.githubusercontent.com/roccopaz/mission-control/main/images/Command%20Center%20Tab.jpg', label:'Command Center'},
+  {src:'https://raw.githubusercontent.com/roccopaz/mission-control/main/images/Content%20Tab.jpg', label:'Content'}
+];
+function showTab(i){
+  document.getElementById('mainImg').src=imgs[i].src;
+  document.getElementById('tabLabel').textContent=imgs[i].label;
+  document.querySelectorAll('.tab').forEach((t,j)=>t.classList.toggle('active',i===j));
+}
+</script>
+</body>
+</html>
