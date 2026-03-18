@@ -8,7 +8,7 @@
 
 ## 🎯 Overview
 
-Mission Control is a single-page web dashboard built for **MODTECH Ventures** — the operational hub for monitoring a multi-agent AI system running on a Linux VPS. It provides a centralized view of agent activity, project status, and key business metrics across all active operations.
+Mission Control is a single-page web dashboard built for myself. Ant operational hub for monitoring a multi-agent AI system running on a Linux VPS. It provides a centralized view of agent activity, project status, and key business metrics across all active operations.
 
 ---
 
@@ -18,8 +18,7 @@ Mission Control is a single-page web dashboard built for **MODTECH Ventures** �
 - **Project Tracker** — Status tiles for all active projects (MODTECH FBA, Tech Motivates, Peptide Tracker)
 - **Metrics Overview** — KPI cards with trend indicators for business performance tracking
 - **Dark Mode UI** — Full dark theme with glass-morphism card effects, custom CSS variables, and smooth transitions
-- **Responsive Layout** — CSS Grid layout adapts to different screen sizes
-
+  
 ---
 
 ## 🔧 Tech Stack
@@ -30,9 +29,7 @@ Mission Control is a single-page web dashboard built for **MODTECH Ventures** �
 - **OpenAI Codex** — Code completion and generation for JavaScript logic
 - **HTML5** — Semantic structure
 - **CSS3** — Custom properties (variables), CSS Grid, Flexbox, glass-morphism effects, keyframe animations
-- **Vanilla JavaScript** — Dynamic rendering, no external framework dependencies
-- **Google Fonts (Inter)** — Typography
-
+- 
 ---
 
 ## 🗂️ File Structure
@@ -41,8 +38,10 @@ Mission Control is a single-page web dashboard built for **MODTECH Ventures** �
 mission-control/
 ├── index.html          # Main dashboard (self-contained, all CSS + JS inline)
 ├── README.md           # This file
-└── screenshots/        # Dashboard preview images
-    └── dashboard-main.png
+└── images/        # Dashboard preview images
+    └── dashboard-main.jpg
+    └── Comtent Tab.jpg
+    └── Command Center Tab.jpg
 ```
 
 ---
