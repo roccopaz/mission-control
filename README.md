@@ -2,7 +2,7 @@
 
 > A custom-built, real-time operations dashboard for monitoring AI agents, projects, and business metrics — built as part of a self-hosted multi-agent AI infrastructure.
 
-[![Dashboard Preview](screenshots/dashboard-main.jpg)](https://roccopaz.github.io/mission-control/)
+![Dashboard Preview](screenshots/dashboard-main.png)
 
 ---
 
@@ -41,8 +41,8 @@ Mission Control is a single-page web dashboard built for **MODTECH Ventures** �
 mission-control/
 ├── index.html          # Main dashboard (self-contained, all CSS + JS inline)
 ├── README.md           # This file
-└── dashboard-main.jpg  # Dashboard preview images
-    
+└── screenshots/        # Dashboard preview images
+    └── dashboard-main.png
 ```
 
 ---
@@ -70,6 +70,21 @@ xdg-open index.html
 - Designed a complete dark-mode dashboard UI using HTML, CSS, and JavaScript — implementing CSS custom properties (variables) for consistent theming across 1200+ lines of code
 - Used CSS Grid for multi-column responsive layouts with card-based components and glass-morphism effects
 - Structured a large single-file application with clear architecture and maintainable, well-commented code
+
+---
+
+## 🔌 API Integrations
+
+Mission Control connects to real external APIs to pull live data:
+
+| API | Purpose |
+|-----|---------|
+| **Amazon SP-API** | Syncs live units sold, order count, and revenue directly from the MODTECH FBA business |
+| **YNAB Budgeting API** | Pulls expense categories, tracks MODTECH spend, and calculates net P&L automatically |
+| **Brave Search API** | Powers the trending intel feed — fetches latest AI news, market trends, and research signals |
+| **Postiz API** | Connects the content calendar — pulls scheduled and published posts across YouTube and TikTok |
+| **ISS Tracker API** | Real-time International Space Station position, speed, and crew data displayed in the dashboard |
+| **Kanye REST API** | Injects motivational quotes into the dashboard header on load |
 
 ---
 
