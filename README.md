@@ -24,9 +24,13 @@ Mission Control is a single-page web dashboard built for **MODTECH Ventures** �
 
 ## 🔧 Tech Stack
 
+- **Claude Code (Anthropic)** — AI coding agent used to scaffold, debug, and iteratively refine the entire dashboard
+- **OpenClaw** — Multi-agent AI orchestration platform that directed Claude Code and managed the development workflow
+- **Claude Sonnet / Claude Opus** — LLMs used for code generation, UI reasoning, and architecture decisions
+- **OpenAI Codex** — Code completion and generation for JavaScript logic
 - **HTML5** — Semantic structure
-- **CSS3** — Custom properties (CSS variables), CSS Grid, Flexbox, glass-morphism effects, animations
-- **Vanilla JavaScript** — Dynamic data rendering, no external framework dependencies
+- **CSS3** — Custom properties (variables), CSS Grid, Flexbox, glass-morphism effects, keyframe animations
+- **Vanilla JavaScript** — Dynamic rendering, no external framework dependencies
 - **Google Fonts (Inter)** — Typography
 
 ---
