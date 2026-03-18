@@ -41,8 +41,8 @@ Mission Control is a single-page web dashboard built for **MODTECH Ventures** �
 mission-control/
 ├── index.html          # Main dashboard (self-contained, all CSS + JS inline)
 ├── README.md           # This file
-└── screenshots/        # Dashboard preview images
-    └── dashboard-main.jpg
+└── dashboard-main.jpg  # Dashboard preview images
+    
 ```
 
 ---
