@@ -2,7 +2,7 @@
 
 > A custom-built, real-time operations dashboard for monitoring AI agents, projects, and business metrics — built as part of a self-hosted multi-agent AI infrastructure.
 
-!LiveDemo[images/dashboard-main.jpg](https://roccopaz.github.io/mission-control/preview.html)
+[Preview](https://roccopaz.github.io/mission-control/preview.html)
 
 ---
 
