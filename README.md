@@ -43,7 +43,7 @@ mission-control/
 ├── index.html          # Main dashboard (self-contained, all CSS + JS inline)
 ├── README.md           # This file
 └── screenshots/        # Dashboard preview images
-    └── dashboard-main.png
+    └── dashboard-main.jpg
 ```
 
 ---
