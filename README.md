@@ -8,14 +8,14 @@
 
 ## 🎯 Overview
 
-Mission Control is a single-page web dashboard built for **MODTECH Ventures** — the operational hub for monitoring a multi-agent AI system running on a Linux VPS. It provides a centralized view of agent activity, project status, and key business metrics across all active operations.
+Mission Control is a single-page web dashboard built for myself — the operational hub for monitoring a multi-agent AI system running on a Linux VPS. It provides a centralized view of agent activity, project status, and key business metrics across all active operations.
 
 ---
 
 ## ✨ Features
 
 - **Agent Status Panel** — Live status cards for each AI agent (Roni, Robo, Star, Yoshi) with role, model, and channel bindings
-- **Project Tracker** — Status tiles for all active projects (MODTECH FBA, Tech Motivates, Peptide Tracker)
+- **Project Tracker** — Status tiles for all active projects
 - **Metrics Overview** — KPI cards with trend indicators for business performance tracking
 - **Dark Mode UI** — Full dark theme with glass-morphism card effects, custom CSS variables, and smooth transitions
 - **Responsive Layout** — CSS Grid layout adapts to different screen sizes
