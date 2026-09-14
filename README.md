@@ -1,97 +1,60 @@
-# 🏢 Mission Control Dashboard
+# Mission Control
 
-> A custom-built, real-time operations dashboard for monitoring AI agents, projects, and business metrics — built as part of a self-hosted multi-agent AI infrastructure.
+An operations dashboard for reviewing projects, agent activity, and business information in one place.
 
-[Preview](https://roccopaz.github.io/mission-control/preview.html)
+[Screenshot walkthrough](https://roccopaz.github.io/mission-control/preview.html) · [Portfolio](https://roccopaz.github.io/)
 
----
+## The problem
 
-## 🎯 Overview
+Running a business alongside several automation workflows creates separate places to check project status, tasks, and performance. I built Mission Control as a central interface for reviewing that information and deciding what needs attention.
 
-Mission Control is a single-page web dashboard built for myself. Ant operational hub for monitoring a multi-agent AI system running on a Linux VPS. It provides a centralized view of agent activity, project status, and key business metrics across all active operations.
+## My role and approach
 
----
+I defined the operational purpose and refined the dashboard through AI-assisted development. I organized the interface around projects, agent activity, revenue, content, and research so related information could be reviewed together.
 
-## ✨ Features
+The implementation uses HTML, CSS, and JavaScript in a self-contained page. CSS Grid and Flexbox support the layout, while the public version uses browser storage for local state. This keeps the demonstration easy to run without a private backend.
 
-- **Agent Status Panel** — Live status cards for each AI agent (Roni, Robo, Star, Yoshi) with role, model, and channel bindings
-- **Project Tracker** — Status tiles for all active projects (MODTECH FBA, Tech Motivates, Peptide Tracker)
-- **Metrics Overview** — KPI cards with trend indicators for business performance tracking
-- **Dark Mode UI** — Full dark theme with glass-morphism card effects, custom CSS variables, and smooth transitions
-  
----
+## Public demo and private integrations
 
-## 🔧 Tech Stack
+**The public dashboard uses sample data. Its figures are not verified business results.** Changes in the demo are stored in the visitor's browser; the public source is not a deployment of my private business integrations.
 
-- **Claude Code (Anthropic)** — AI coding agent used to scaffold, debug, and iteratively refine the entire dashboard
-- **OpenClaw** — Multi-agent AI orchestration platform that directed Claude Code and managed the development workflow
-- **Claude Sonnet / Claude Opus** — LLMs used for code generation, UI reasoning, and architecture decisions
-- **OpenAI Codex** — Code completion and generation for JavaScript logic
-- **HTML5** — Semantic structure
-- **CSS3** — Custom properties (variables), CSS Grid, Flexbox, glass-morphism effects, keyframe animations
-- 
----
+The private workflow has been described with these integrations. Their live connection status cannot be established from the public repository:
 
-## 🗂️ File Structure
+| Integration | Business purpose |
+| --- | --- |
+| Amazon SP-API | Sales, orders, and fulfillment information |
+| YNAB | Spending and budget information |
+| Brave Search | Research and trend discovery |
+| Postiz | Scheduled and published content |
 
-```
-mission-control/
-├── index.html          # Main dashboard (self-contained, all CSS + JS inline)
-├── README.md           # This file
-└── images/        # Dashboard preview images
-    └── dashboard-main.jpg
-    └── Comtent Tab.jpg
-    └── Command Center Tab.jpg
-```
+The ISS tracker and quote API are supplementary display features, separate from the business integrations. They should not be counted as evidence of business functionality or operational impact.
 
----
+## Result and limits
 
-## 🚀 Running Locally
+The dashboard provides a single interface for reviewing operational information. The public demo demonstrates the interface and local interactions. It does not establish time savings, financial returns, or production reliability for private services.
 
-No build step required — open `index.html` directly in any browser:
+## Public source status
 
-```bash
-# Clone the repo
-git clone https://github.com/roccopaz/mission-control.git
+The current public `index.html` ends mid-script inside `renderClientTable`. A local browser check showed an empty dashboard beneath the navigation. The interactive demo needs repair before it can be used as a working demonstration. The linked screenshot walkthrough remains available.
 
-# Open in browser
-open index.html
-# or on Linux:
-xdg-open index.html
-```
+## Run and check the demo
 
----
+Open `index.html` in a browser, or serve this folder with a local static web server. No build step is required.
 
-## 💡 What I Built & Learned
+When validating changes, check navigation between views, local state after a reload, narrow-screen layout, and browser console errors. Testing the public interface does not validate credentials, data freshness, or private API connections.
 
-- Built using **AI-assisted development** with **Claude Code** (Anthropic's CLI coding agent) and **OpenClaw**, applying prompt engineering and iterative refinement to produce a production-quality dashboard — demonstrating practical understanding of LLM coding workflows and model capability tradeoffs
-- Applied deliberate **model selection**: Claude Sonnet for fast day-to-day orchestration, Claude Opus for complex reasoning, and OpenAI Codex for code generation — making real cost/speed/capability tradeoffs
-- Designed a complete dark-mode dashboard UI using HTML, CSS, and JavaScript — implementing CSS custom properties (variables) for consistent theming across 1200+ lines of code
-- Used CSS Grid for multi-column responsive layouts with card-based components and glass-morphism effects
-- Structured a large single-file application with clear architecture and maintainable, well-commented code
+## Technology and AI assistance
 
----
+- HTML, CSS, and JavaScript for the interface and local interactions.
+- Claude Code and OpenClaw for AI-assisted scaffolding, debugging, and iterative refinement.
+- Claude Sonnet, Claude Opus, and OpenAI Codex were used in the development workflow.
 
-## 🔌 API Integrations
+AI tools contributed to the implementation. My contribution was defining the purpose, directing the workflow, and refining the dashboard; this project should be evaluated with that disclosure in mind.
 
-Mission Control connects to real external APIs to pull live data:
+## Files
 
-| API | Purpose |
-|-----|---------|
-| **Amazon SP-API** | Syncs live units sold, order count, and revenue directly from the MODTECH FBA business |
-| **YNAB Budgeting API** | Pulls expense categories, tracks MODTECH spend, and calculates net P&L automatically |
-| **Brave Search API** | Powers the trending intel feed — fetches latest AI news, market trends, and research signals |
-| **Postiz API** | Connects the content calendar — pulls scheduled and published posts across YouTube and TikTok |
-| **ISS Tracker API** | Real-time International Space Station position, speed, and crew data displayed in the dashboard |
-| **Kanye REST API** | Injects motivational quotes into the dashboard header on load |
+- `index.html`: interactive public dashboard with sample data.
+- `preview.html`: screenshot walkthrough.
+- `images/`: existing dashboard screenshots, which may show a different version from the public demo.
 
----
-
-## 🔗 Related Projects
-
-- [OpenClaw VPS AI System](https://roccopaz.github.io) — the platform this dashboard monitors
-- [Portfolio](https://roccopaz.github.io) — full project breakdown
-
----
-
-*Built as part of a self-hosted multi-agent AI infrastructure — Texas State University CIS Senior*
+Rocco Paz · Texas State University CIS student · Expected graduation December 2027
